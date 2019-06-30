@@ -27,6 +27,7 @@ class Neuro:
 
     def get_vector_for_text(self, text: str):
         elmo_outpt = self.elmo([text.split(' ')])
+        print(elmo_outpt)
         return self.encoder.predict(elmo_outpt)[0]
 
     def get_vector_for_texts(self, texts: [str]):
